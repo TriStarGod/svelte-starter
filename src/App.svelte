@@ -1,16 +1,10 @@
 <script>
   import Router from 'svelte-spa-router'
-  import Home from './routes/Home.svelte'
-  import About from './routes/About.svelte'
-
-  const routes = {
-    '/': Home,
-    '/about': About,
-  }
+  import routes from './routes'
+  import Nav from './components/Nav.svelte'
 </script>
 
-<nav class="flex items-center p-24 max-w-960 mx-auto">
-  <a class="underline" href="#/">Home</a>
-  <a class="underline ml-16" href="#/about">About</a>
-</nav>
-<Router {routes} />
+<Nav />
+<main class="flex-1">
+  <Router {routes} />
+</main>
